@@ -1,8 +1,12 @@
 var hostname = window.location.hostname;
+var protocol = window.location.protocol;
+var port = window.location.port;
 var channelname = window.location.pathname.replace('/','').replace('?','');
+
 $('#nameChannel').html(channelname);
+
 var socket = io();
-socket.connect('http://' + hostname + ':3000');
+socket.connect(protocol + '//' + hostname + ':' + port);
 $('form').submit(function(){
   socket.emit(channelname, {message: $('#message').val(), user: getUser()});
   $('#message').val('');
@@ -13,7 +17,7 @@ socket.on(channelname, function(msg){
 });
 
 $.ajax({
-   url:'http://' + hostname + ':3001/api/' + channelname,
+   url: protocol + '//' + hostname + ':3001/api/' + channelname,
    type:'GET',
    success: function(data){
       var msgs = data[0].messages;

@@ -7,12 +7,14 @@ var path = require('path');
 
 var hostname = '';
 var channelname = '';
+var protocol = '';
 
 app.use(express.static(path.resolve(__dirname + '/../client/')));
 
 app.get('/:channelname', function(req, res){
   channelname = req.params.channelname;
-  hostname = req.params.hostname;
+  hostname = req.hostname;
+  protocol = req.protocol;
   res.sendFile(path.resolve(__dirname + '/../client/index.html'));
 });
 
@@ -23,9 +25,9 @@ io.on('connection', function(socket){
   });
 });
 
-function saveMsg(msg){
+function saveMsg(msg){  
   request.post(
-      'http://' + hostname + ':3001/api/' + channelname,
+      protocol + '://' + hostname + ':3001/api/' + channelname,
       { json: { user: msg.user, message: msg.message } }
   );
 };
