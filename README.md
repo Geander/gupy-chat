@@ -60,6 +60,7 @@ Instalar as dependências usando o npm:
 ```
 
 Para rodar os testes:
+(também passa o lint)
 ```
  npm run gulp test
 ```
@@ -98,6 +99,24 @@ http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
 enviar mensagem para esse canal, **post**, parametros: {"user":"userX","message":"msgX"}<br />
 nesse momento, o canal precisa existir<br />
 http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
+
+### Tasks adicionais
+
+Passar o lint:
+```
+ npm run gulp lint
+```
+
+Rodar só o APP:
+
+```
+ npm run gulp run-app
+```
+
+Rodar só a API:
+```
+ npm run gulp run-api
+```
 
 ### Próximas Features
 - Tirar a senha do db no projeto.
