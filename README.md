@@ -101,6 +101,7 @@ enviar mensagem para esse canal, **PUT**, parametros: {"user":"userX","message":
 nesse momento, o canal precisa existir<br />
 http://localhost:3001/api/ < nome-de-qualquer-canal >
 
+
 <br />
 ### Tasks adicionais
 Passar o lint:
