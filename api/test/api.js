@@ -22,7 +22,7 @@ describe('Channel', function() {
 
 describe('Api', function() {
 
-  describe('/GET chat test', function() {
+  describe('/GET chat empty test', function() {
 
         it('it should GET all the messages', function(done) {
           chai.request(api)
@@ -31,10 +31,6 @@ describe('Api', function() {
                   res.should.have.status(200);
                   res.should.be.json;
                   res.body.should.be.a('array');
-                  res.body.length.should.be.eql(1);
-                  res.body[0].should.have.property('_id');
-                  res.body[0].should.have.property('name');
-                  res.body[0].should.have.property('messages');
                 done();
               });
         });
@@ -73,4 +69,21 @@ describe('Api', function() {
       });
   });
 
+});
+
+describe('/GET chat test', function() {
+  it('it should GET the message saved', function(done) {
+    chai.request(api)
+        .get('/api/test')
+        .end(function(err, res) {
+            res.should.have.status(200);
+            res.should.be.json;
+            res.body.should.be.a('array');
+            res.body.length.should.be.eql(1);
+            res.body[0].should.have.property('_id');
+            res.body[0].should.have.property('name');
+            res.body[0].should.have.property('messages');
+          done();
+        });
+    });
 });
