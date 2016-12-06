@@ -25,8 +25,8 @@ io.on('connection', function(socket){
   });
 });
 
-function saveMsg(msg){  
-  request.post(
+function saveMsg(msg){
+  request.put(
       protocol + '://' + hostname + ':3001/api/' + channelname,
       { json: { user: msg.user, message: msg.message } }
   );

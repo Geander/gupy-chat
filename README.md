@@ -85,23 +85,24 @@ Para rodar o Projeto:
 
 <br />
 ### Testar API pelo Postman
+(Seguindo o padrão de API Rest)<br />
 
-status da api, **get**<br />
+status da api, **GET**<br />
 http://localhost:3001/api/<br />
 
-deletar tudo (só pra ficar melhor de testar), **get**<br />
-http://localhost:3001/api/deleteAll<br />
+deletar tudo (SÓ PRA FICAR FÁCIL DE TESTAR), **DELETE**<br />
+http://localhost:3001/api/<br />
 
-listar tadas mensagens desse canal, **get**<br />
+listar tadas mensagens desse canal, **GET**<br />
 se o canal não existir, aqui que o canal é criado<br />
 http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
 
-enviar mensagem para esse canal, **post**, parametros: {"user":"userX","message":"msgX"}<br />
+enviar mensagem para esse canal, **PUT**, parametros: {"user":"userX","message":"msgX"}<br />
 nesse momento, o canal precisa existir<br />
-http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
+http://localhost:3001/api/ < nome-de-qualquer-canal >
 
+<br />
 ### Tasks adicionais
-
 Passar o lint:
 ```
  npm run gulp lint

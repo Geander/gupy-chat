@@ -18,18 +18,18 @@ router.use(function(req, res, next) {
     next();
 });
 
-router.get('/', function(req, res) {
+router.route('/')
+  .get(function(req, res) {
     res.json({ message: 'Api running!' });
-});
-
-router.get('/deleteAll', function(req, res) {
-  Channel.remove({}, function(err) {
-    res.json({ message: 'Deleted!' });
+  })
+  .delete(function(req, res) {
+    Channel.remove({}, function(err) {
+      res.json({ message: 'Deleted!' });
+    });
   });
-});
 
 router.route('/:channelname')
-    .post(function(req, res) {
+    .put(function(req, res) {
         var channelname = req.params.channelname;
         var user = req.body.user;
         var message = req.body.message;
@@ -76,7 +76,6 @@ router.route('/:channelname')
 
 app.use('/:channelname', router);
 app.use('/api', router);
-app.use('/deleteAll', router);
 
 app.listen(3001);
 
