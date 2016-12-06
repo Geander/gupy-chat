@@ -79,7 +79,7 @@ Para rodar o Projeto:
 >http://localhost:3001
 
 >Url do Chat
->http://localhost:3000/<nome-de-qualquer-canal><br />
+>http://localhost:3000/ < nome-de-qualquer-canal > <br />
 >ex.: http://localhost:3000/canal-dev-gupy
 
 <br />
