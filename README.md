@@ -98,6 +98,7 @@ nesse momento, o canal precisa existir<br />
 http://localhost:3001/api/<nome-de-qualquer-canal><br />
 
 ### Próximas Features
+- Tirar a senha do db no projeto.
 - Ultilização de scss.
 - Gulp Task de build, com Webpack para mimificar css, js, html e disponibilizar na pasta dist.
 - Ofuscar js.
