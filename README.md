@@ -99,6 +99,9 @@ http://localhost:3001/api/<nome-de-qualquer-canal><br />
 
 ### Próximas Features
 - Tirar a senha do db no projeto.
+- Coverage.
+- Testes com mais de 90% de cobertura.
+- Melhorar front-end, talves colocar reactjs ou angularjs.
 - Ultilização de scss.
 - Gulp Task de build, com Webpack para mimificar css, js, html e disponibilizar na pasta dist.
 - Ofuscar js.
