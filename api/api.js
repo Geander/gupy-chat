@@ -20,11 +20,11 @@ router.use(function(req, res, next) {
 
 router.route('/')
   .get(function(req, res) {
-    res.json({ message: 'Api running!' });
+    res.json({message:'Api running!'});
   })
   .delete(function(req, res) {
     Channel.remove({}, function(err) {
-      res.json({ message: 'Deleted!' });
+      res.json({message:'Deleted!'});
     });
   });
 
