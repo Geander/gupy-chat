@@ -61,17 +61,19 @@ Instalar as dependências usando o npm:
 
 Para rodar os testes:
 ```
- gulp test
+ npm run gulp test
 ```
 
 Para rodar o Projeto:
 (o chat vai abrir automaticamente no seu navegador padrão)
 ```
- gulp serve
+ npm run gulp serve
 ```
 
 #### Observações:
 >O chat e a Api, rodam nas portas 3000 e 3001 respectivamente, verifique se essas portas não estão em uso antes de rodar a aplicação.
+
+>É necessário internet para acessar o banco, e baixar os arquivos estáticos das cdns.
 
 >Url da Api
 >http://localhost:3001

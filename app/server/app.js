@@ -5,12 +5,14 @@ var io = require('socket.io')(http);
 var request = require('request');
 var path = require('path');
 
+var hostname = '';
 var channelname = '';
 
 app.use(express.static(path.resolve(__dirname + '/../client/')));
 
 app.get('/:channelname', function(req, res){
   channelname = req.params.channelname;
+  hostname = req.params.hostname;
   res.sendFile(path.resolve(__dirname + '/../client/index.html'));
 });
 
@@ -23,7 +25,7 @@ io.on('connection', function(socket){
 
 function saveMsg(msg){
   request.post(
-      'http://localhost:3001/api/' + channelname,
+      'http://' + hostname + ':3001/api/' + channelname,
       { json: { user: msg.user, message: msg.message } }
   );
 };
