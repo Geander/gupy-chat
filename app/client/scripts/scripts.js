@@ -49,7 +49,8 @@ function formatDate(date){
 function createDiv(user, msg, date){
   return (
     '<div class="alert alert-' + colors(user) + '" role="alert">' +
-      '<strong>' + user + '</strong> ' + '(' + date + ') <br/><span>' + msg + '</span>' +
+      '<span class="glyphicon glyphicon-user" aria-hidden="true"></span>' +
+      '<strong> ' + user + '</strong> ' + '(' + date + ') <br/><span>' + msg + '</span>' +
     '</div>'
   );
 }
