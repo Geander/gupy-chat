@@ -93,11 +93,11 @@ http://localhost:3001/api/deleteAll<br />
 
 listar tadas mensagens desse canal, **get**<br />
 se o canal não existir, aqui que o canal é criado<br />
-http://localhost:3001/api/<nome-de-qualquer-canal><br />
+http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
 
 enviar mensagem para esse canal, **post**, parametros: {"user":"userX","message":"msgX"}<br />
 nesse momento, o canal precisa existir<br />
-http://localhost:3001/api/<nome-de-qualquer-canal><br />
+http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
 
 ### Próximas Features
 - Tirar a senha do db no projeto.
