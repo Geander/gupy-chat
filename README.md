@@ -19,7 +19,7 @@ Este é um exemplo de Chat, seu objetivo é a troca de mensagens entre os usuár
     │   │   ├── scripts            # scripts folder
     │	  │   │   └── scripts.js     # scripts file
     │   ├── server                 # chat folder
-    └──	└── └── app.js             # app chat
+    └─  └─  └─  app.js             # app chat
 
 
 **1 - API (Rest)**
