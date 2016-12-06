@@ -1,0 +1,6 @@
+{
+    "parser": "node",
+    "rules": {
+        "semi": "error"
+    }
+}

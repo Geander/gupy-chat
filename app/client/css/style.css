@@ -1,0 +1,64 @@
+body {
+    background-color: #f2f2f2;
+}
+.row {
+  padding: 10px 0 0 10px;
+}
+.login {
+  text-align: center;
+  padding-top: 250px;
+}
+h3 {
+  font-size: 14px;
+}
+.exit {
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 40px;
+}
+.alert span {
+  color: black;
+}
+#messages div{
+  margin: 10px 10px 10px 10px;
+}
+.error {
+  color: red;
+  display: none;
+}
+#messages{
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #ffffff;
+}
+.alert-color1 {
+    color: #AD8BFE;
+    background-color: #E6DBFF;
+    border-color: #C4ABFE;
+}
+.alert-color2 {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert-color3 {
+    color: #01F33E;
+    background-color: #CAFFD8;
+    border-color: #8BFEA8;
+}
+.alert-color4 {
+    color: #B6BA18;
+    background-color: #F7F9D0;
+    border-color: #EEF093;
+}
+.alert-color5 {
+    color: #5757FF;
+    background-color: #CACAFF;
+    border-color: #9999FF;
+}
+.alert-color6 {
+    color: #59955C;
+    background-color: #DBEADC;
+    border-color: #93BF96;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Gupy Chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAjP/JAET8pwAJaz0AEJFWAB7ZggAe6IoAFb9wACTHewAk1oMALeuSACLykQAo+pgATf+sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwAAAAAAAHRAAAAAVYiIh3cAAAVaZpmIiIAAEsulWVmZmQAdLLpmVVVVAB0su6plVVUAHSzLqqZlVQAdIsy6qqZVAB3SzLu7u2UAHd0szMzMtQAR3dIiIiIiAAEd3d3d3dAAABERERERAAAAAAAAAAAAD//wAA/+cAAP+PAADgBwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD//wAA" rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+
+    <div class="container login" style="display:none">
+      <div class="row row-no-padding col-lg-12">
+          <h2 class="form-signin-heading">Enter your email to enter the chat</h2>
+      </div>
+      <div class="row row-no-padding col-lg-12">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"><input class="form-control" id="email" type="text" placeholder="Email address" required autofocus></div>
+          <div class="col-md-4"></div>
+      </div>
+      <div class="row row-no-padding col-lg-12">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 error">Invalid e-mail</div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row row-no-padding col-lg-12">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"><button class="btn btn-md btn-primary btn-block" type="submit" id="btnEmail">Sign in</button></div>
+          <div class="col-md-4"></div>
+      </div>
+    </div>
+
+    <div class="container chat" style="display:none">
+      <div class="page-header">
+        <h1>Gupy Chat - Channel <strong><span id="nameChannel"></span></strong></h1>
+        <div style="text-align:right"><h3>Hi <strong><span id="name-user"></span></strong><span class="glyphicon glyphicon-remove-circle exit" aria-hidden="true"></span></h3></div>
+      </div>
+      <div id="messages" style="height:600px;overflow:auto;"></div>
+      <form action="">
+        <div class="row row-no-padding col-lg-12">
+          <div class="col-md-11"><input id="message" autocomplete="off" class="form-control" placeHolder="Enter your message..."/></div>
+          <div class="col-md-1"><button type="submit" class="btn btn-md btn-primary">Send</button></div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+
+  </body>
+</html>
