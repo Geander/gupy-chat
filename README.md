@@ -6,20 +6,20 @@ Este é um exemplo de Chat, seu objetivo é a troca de mensagens entre os usuár
 ### Estrutura
 
     .
-    ├── api                        # api folder
-    │   ├── models                 # models folder   
-    │   │   ├── Channel.js         # model for channel
-    │   ├── test                   # unit tests folder
-    │	  │   ├── api.js             # api unit test
-    │   └── api.js                 # api rest
-    │── app                        # app folder
-    │   ├── client                 # client folder   
-    │   │   ├── css                # css folder
-    │	  │   │   └── style.css      # css file
-    │   │   ├── scripts            # scripts folder
-    │	  │   │   └── scripts.js     # scripts file
-    │   ├── server                 # chat folder
-    └─  └─  └─  app.js             # app chat
+    ├── api
+    │   ├── models
+    │   │   ├── Channel.js
+    │   ├── test
+    │	  │   ├── api.js
+    │   └── api.js
+    │── app
+    │   ├── client
+    │   │   ├── css
+    │	  │   │   └── style.css
+    │   │   ├── scripts
+    │	  │   │   └── scripts.js
+    │   ├── server
+    └─  └─  └─  app.js
 
 
 **1 - API (Rest)**
@@ -34,11 +34,11 @@ Este é um exemplo de Chat, seu objetivo é a troca de mensagens entre os usuár
 >Interface para utilizar o chat.
 
 ### Tecnologias ultilizadas
-Como linguagem de programção temo o **node.js**.<br />
+Como linguagem de programção temos o **node.js**.<br />
 Para guardar as mensagens usei o banco **mongoDb**, que se encontra no **mlab**.<br />
 Ultilizei o **Socket .io** para envio/recebimento das mensagens em tempo real.<br />
 Na interface do chat, temos **html**, **css**, **javascript**, **jquery**, **bootstrap**.<br />
-Nos testes atomatizados, usamos **mocha** e **chai**.<br />
+Nos testes atomatizados, uso **mocha** e **chai**.<br />
 Para rodar o chat, rodar a API e rodar os testes, temos o maravilhoso **gulp**.<br />
 
 ### Passos para executar o projeto
@@ -76,10 +76,10 @@ Para rodar o Projeto:
 
 >É necessário internet para acessar o banco, e baixar os arquivos estáticos das CDNs.
 
->Url da Api
+>Url da Api:<br />
 >http://localhost:3001
 
->Url do Chat
+>Url do Chat:<br />
 >http://localhost:3000/ < nome-de-qualquer-canal > <br />
 >ex.: http://localhost:3000/canal-dev-gupy
 
@@ -87,17 +87,17 @@ Para rodar o Projeto:
 ### Testar API pelo Postman
 (Seguindo o padrão de API Rest)<br />
 
-status da api, **GET**<br />
+status da api, método **GET**<br />
 http://localhost:3001/api/<br />
 
-deletar tudo (SÓ PRA FICAR FÁCIL DE TESTAR), **DELETE**<br />
+deletar tudo (SÓ PRA FICAR FÁCIL DE TESTAR, ISSO NÃO É FEATURE), método **DELETE**<br />
 http://localhost:3001/api/<br />
 
-listar tadas mensagens desse canal, **GET**<br />
+listar tadas mensagens desse canal, método **GET**<br />
 se o canal não existir, aqui que o canal é criado<br />
 http://localhost:3001/api/ < nome-de-qualquer-canal > <br />
 
-enviar mensagem para esse canal, **PUT**, parametros: {"user":"userX","message":"msgX"}<br />
+enviar mensagem para esse canal, método **PUT** (put, pois modifica um canal já existente),<br /> parametros: {"user":"userX","message":"msgX"}<br />
 nesse momento, o canal precisa existir<br />
 http://localhost:3001/api/ < nome-de-qualquer-canal >
 
