@@ -131,6 +131,7 @@ Rodar só a API:
 - Criptografar as mensagens.
 - Visualizar usuários conectados no canal.
 - Parte admninistrativa, para gerenciar os usuários e mensagens.
+- Arrumar deprecated dependencies dos pacotes npm.
 - Testes para html (DOM).
 - Ci Buil no Jenkins.
 - Colocar na Cloud AWS (vide próximo tópico)
