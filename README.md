@@ -34,9 +34,9 @@ Este é um exemplo de Chat, seu objetivo é a troca de mensagens entre os usuár
 >Interface para utilizar o chat.
 
 ### Tecnologias ultilizadas
-Como linguagem de programção escolhemos o **node.js**.<br />
-Para guardar as mensagens usamos o banco **mongoDb**, que se encontra no **mlab**.<br />
-Ultilizamos o **Socket .io** para envio/recebimento das mensagens em tempo real.<br />
+Como linguagem de programção temo o **node.js**.<br />
+Para guardar as mensagens usei o banco **mongoDb**, que se encontra no **mlab**.<br />
+Ultilizei o **Socket .io** para envio/recebimento das mensagens em tempo real.<br />
 Na interface do chat, temos **html**, **css**, **javascript**, **jquery**, **bootstrap**.<br />
 Nos testes atomatizados, usamos **mocha** e **chai**.<br />
 Para rodar o chat, rodar a API e rodar os testes, temos o maravilhoso **gulp**.<br />
@@ -74,7 +74,7 @@ Para rodar o Projeto:
 #### Observações:
 >O chat e a Api, rodam nas portas 3000 e 3001 respectivamente, verifique se essas portas não estão em uso antes de rodar a aplicação.
 
->É necessário internet para acessar o banco, e baixar os arquivos estáticos das cdns.
+>É necessário internet para acessar o banco, e baixar os arquivos estáticos das CDNs.
 
 >Url da Api
 >http://localhost:3001
