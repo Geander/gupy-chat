@@ -6,6 +6,8 @@ var chaiHttp = require('chai-http');
 var api = require('../api');
 var should = chai.should();
 
+var apihost = 'http://localhost:3001';
+
 chai.use(chaiHttp);
 
 describe('Channel', function() {
@@ -25,7 +27,7 @@ describe('Api', function() {
   describe('/GET chat empty test', function() {
 
         it('it should GET all the messages', function(done) {
-          chai.request(api)
+          chai.request(apihost)
               .get('/api/test')
               .end(function(err, res) {
                   res.should.have.status(200);
@@ -42,7 +44,7 @@ describe('Api', function() {
             message: 'Lorem ipsum dolor sit amet',
             user: 'user@gmail.com'
         };
-        chai.request(api)
+        chai.request(apihost)
             .put('/api/test')
             .send(msg)
             .end(function(err, res) {
@@ -57,7 +59,7 @@ describe('Api', function() {
             message: 'Lorem ipsum dolor sit amet',
             user: ''
         };
-        chai.request(api)
+        chai.request(apihost)
             .put('/api/test')
             .send(msg)
             .end(function(err, res) {
@@ -73,7 +75,7 @@ describe('Api', function() {
 
 describe('/GET chat test', function() {
   it('it should GET the message saved', function(done) {
-    chai.request(api)
+    chai.request(apihost)
         .get('/api/test')
         .end(function(err, res) {
             res.should.have.status(200);
