@@ -43,7 +43,7 @@ describe('Api', function() {
             user: 'user@gmail.com'
         };
         chai.request(api)
-            .post('/api/test')
+            .put('/api/test')
             .send(msg)
             .end(function(err, res) {
                 res.should.have.status(200);
@@ -58,7 +58,7 @@ describe('Api', function() {
             user: ''
         };
         chai.request(api)
-            .post('/api/test')
+            .put('/api/test')
             .send(msg)
             .end(function(err, res) {
                 res.should.have.status(200);
