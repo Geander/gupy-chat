@@ -5,7 +5,7 @@ Este é um exemplo de Chat, seu objetivo é a troca de mensagens entre os usuár
 
 ### Estrutura
 
-     .
+    .
     ├── api                        # api folder
     │   ├── models                 # models folder   
     │   │   ├── Channel.js         # model for channel
@@ -119,7 +119,7 @@ Rodar só a API:
  npm run gulp run-api
 ```
 
-### Próximas Features
+### Próximas melhorias
 - Tirar a senha do db no projeto.
 - Coverage.
 - Testes com mais de 90% de cobertura.
